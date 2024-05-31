@@ -4,10 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import utilities.Helper;
 
 import java.io.IOException;
@@ -38,5 +35,9 @@ public class TestBase {
            Helper.captureScreenShot(driver, result.getName());
        }
 
+   }
+ //  @AfterSuite
+    public void closeDriver(){
+       driver.quit();
    }
 }

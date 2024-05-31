@@ -9,6 +9,11 @@ import pages.UserRegistrationPage;
 import java.time.Duration;
 
 public class UserRegistrationTest extends TestBase{
+
+    String firstName = "Ahmed";
+    String lastName = "Ali";
+    String email = "Aliemad89@test.local";
+    String password = "1234567";
     //Take Objects from the Pages you want to test
     HomePage homeObject;
     UserRegistrationPage registerObject;
@@ -18,8 +23,7 @@ public class UserRegistrationTest extends TestBase{
         homeObject = new HomePage(driver);
         homeObject.openRegistrationPage();
         registerObject = new UserRegistrationPage(driver);
-        registerObject.registration("Ahmed","Ali",
-                "ahmed103@test.com","12345678");
+        registerObject.registration(firstName,lastName, email,password);
         Assert.assertTrue(registerObject.successMessage.getText()
                 .contains("Your registration completed"));
     }

@@ -19,7 +19,7 @@ public class MyAccountTest extends TestBase{
     String newPassword = "123456789";
     String firstName = "Ahmed";
     String lastName = "Ali";
-    String email= "ahmed98@test.com";
+    String email= "Emad23@test.com";
     @Test(priority = 1)
     public void userCanRegisterSuccessfully(){
         homeObject = new HomePage(driver);
@@ -56,6 +56,7 @@ public class MyAccountTest extends TestBase{
         loginObject = new LoginPage(driver);
         loginObject.userLogin(email,newPassword);
         Assert.assertTrue(registerObject.logOutLink.isDisplayed());
+
 
     }
 }
