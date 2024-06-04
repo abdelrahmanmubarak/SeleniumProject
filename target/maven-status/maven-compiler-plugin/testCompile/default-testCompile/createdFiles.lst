@@ -1,0 +1,16 @@
+tests/UserRegistrationTestUsingJson.class
+tests/EmailFriendTest.class
+tests/SearchProductUsingAutoSuggest.class
+data/ExcelReader.class
+tests/UserRegistrationTestUsingExcel.class
+utilities/Helper.class
+tests/UserRegistrationTestUsingJavaFaker.class
+tests/MyAccountTest.class
+tests/ChangeCurrencyTest.class
+tests/UserRegistrationTest.class
+tests/TestBase.class
+tests/SearchProductTest.class
+data/JsonDataReader.class
+tests/ContactUsTest.class
+tests/ProductHoverMenuTest.class
+tests/AddProductToWishListTest.class

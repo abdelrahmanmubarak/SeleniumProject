@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="6" total="10" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-03T08:56:34Z" name="nopcommerce Regression Suite" finished-at="2024-06-03T08:56:42Z" duration-ms="7641">
+    <groups>
+    </groups>
+    <test started-at="2024-06-03T08:56:34Z" name="Regression Test" finished-at="2024-06-03T08:56:42Z" duration-ms="7641">
+      <class name="tests.UserRegistrationTestUsingJavaFaker">
+        <test-method signature="userCanRegisterSuccessfully()[pri:1, instance:tests.UserRegistrationTestUsingJavaFaker@2db4ad1]" started-at="2024-06-03T08:56:38Z" name="userCanRegisterSuccessfully" finished-at="2024-06-03T08:56:42Z" duration-ms="4135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanRegisterSuccessfully -->
+        <test-method is-config="true" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationTestUsingJavaFaker@2db4ad1]" started-at="2024-06-03T08:56:42Z" name="screenShotOnFailure" finished-at="2024-06-03T08:56:42Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanRegisterSuccessfully status=SUCCESS method=UserRegistrationTestUsingJavaFaker.userCanRegisterSuccessfully()[pri:1, instance:tests.UserRegistrationTestUsingJavaFaker@2db4ad1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenShotOnFailure -->
+      </class> <!-- tests.UserRegistrationTestUsingJavaFaker -->
+      <class name="tests.ProductHoverMenuTest">
+        <test-method signature="userCanSelectSubCatUsingHoverMenu()[pri:0, instance:tests.ProductHoverMenuTest@765d55d5]" started-at="2024-06-03T08:56:36Z" name="userCanSelectSubCatUsingHoverMenu" finished-at="2024-06-03T08:56:37Z" duration-ms="767" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanSelectSubCatUsingHoverMenu -->
+        <test-method is-config="true" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.ProductHoverMenuTest@765d55d5]" started-at="2024-06-03T08:56:37Z" name="screenShotOnFailure" finished-at="2024-06-03T08:56:37Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanSelectSubCatUsingHoverMenu status=SUCCESS method=ProductHoverMenuTest.userCanSelectSubCatUsingHoverMenu()[pri:0, instance:tests.ProductHoverMenuTest@765d55d5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenShotOnFailure -->
+      </class> <!-- tests.ProductHoverMenuTest -->
+      <class name="tests.SearchProductTest">
+        <test-method signature="userCanSearchForProduct()[pri:0, instance:tests.SearchProductTest@2513a118]" started-at="2024-06-03T08:56:37Z" name="userCanSearchForProduct" finished-at="2024-06-03T08:56:38Z" duration-ms="1188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanSearchForProduct -->
+        <test-method is-config="true" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.SearchProductTest@2513a118]" started-at="2024-06-03T08:56:38Z" name="screenShotOnFailure" finished-at="2024-06-03T08:56:38Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanSearchForProduct status=SUCCESS method=SearchProductTest.userCanSearchForProduct()[pri:0, instance:tests.SearchProductTest@2513a118] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenShotOnFailure -->
+      </class> <!-- tests.SearchProductTest -->
+      <class name="tests.ContactUsTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.ContactUsTest@7c3e4b1a]" started-at="2024-06-03T08:56:31Z" name="setUp" finished-at="2024-06-03T08:56:34Z" duration-ms="3403" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="userCanContactUs()[pri:0, instance:tests.ContactUsTest@7c3e4b1a]" started-at="2024-06-03T08:56:34Z" name="userCanContactUs" finished-at="2024-06-03T08:56:36Z" duration-ms="1434" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanContactUs -->
+        <test-method is-config="true" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.ContactUsTest@7c3e4b1a]" started-at="2024-06-03T08:56:36Z" name="screenShotOnFailure" finished-at="2024-06-03T08:56:36Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanContactUs status=SUCCESS method=ContactUsTest.userCanContactUs()[pri:0, instance:tests.ContactUsTest@7c3e4b1a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenShotOnFailure -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:tests.ContactUsTest@7c3e4b1a]" started-at="2024-06-03T08:56:42Z" name="closeDriver" finished-at="2024-06-03T08:56:42Z" duration-ms="171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- tests.ContactUsTest -->
+    </test> <!-- Regression Test -->
+  </suite> <!-- nopcommerce Regression Suite -->
+</testng-results>
