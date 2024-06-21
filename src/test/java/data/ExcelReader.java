@@ -20,9 +20,9 @@ public class ExcelReader {
     public Object [][] getExcelData() throws IOException {
             fis = getFileInputStream();
         XSSFWorkbook wb = new XSSFWorkbook(fis);
-        XSSFSheet sheet = wb.getSheetAt(0);
+        XSSFSheet sheet = wb.getSheetAt(1);
         int TotalNumberOfRows = (sheet.getLastRowNum()+1);
-        int TotalNumberOfCols = 4 ;
+        int TotalNumberOfCols = 2 ;
         String[][] arrayExcelData = new String[TotalNumberOfRows][TotalNumberOfCols] ;
 
         for (int i = 0; i < TotalNumberOfRows; i++)

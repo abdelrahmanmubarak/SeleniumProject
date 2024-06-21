@@ -23,7 +23,7 @@ public class UserRegistrationTestUsingJavaFaker extends TestBase{
     String password = fakeData.number().digits(8).toString();
 
     @Test(priority = 1,alwaysRun = true)
-    public void userCanRegisterSuccessfully() throws IOException, ParseException {
+    public void userCanRegisterSuccessfully() throws IOException, ParseException, InterruptedException {
 
 
         homeObject = new HomePage(driver);

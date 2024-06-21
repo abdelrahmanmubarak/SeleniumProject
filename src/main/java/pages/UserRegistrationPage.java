@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,9 +18,9 @@ public class UserRegistrationPage extends PageBase {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         jsExecutor = (JavascriptExecutor) driver;
     }
-    @FindBy(id = "gender-male")
+    @FindBy(css = "#gender-male")
     WebElement genderRdoBtn;
-    @FindBy(id = "FirstName")
+    @FindBy(xpath = "//input[@data-val-required='First name is required.']")
     WebElement fnTxtBox;
     @FindBy(id = "LastName")
     WebElement lnTxtBox;
@@ -37,7 +38,10 @@ public class UserRegistrationPage extends PageBase {
     public WebElement logOutLink; //make it Public to be able to assert on it in the test Case
     @FindBy(css = "a.ico-account")
     WebElement myAccountLink;
-    public void registration(String firstName, String lastName, String email, String password){
+    public void registration(String firstName, String lastName, String email, String password) throws InterruptedException {
+
+        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#gender-male")));
+
         clickOnButton(genderRdoBtn);
         setTextInTxtBox(fnTxtBox,firstName);
         setTextInTxtBox(lnTxtBox,lastName);
@@ -45,6 +49,8 @@ public class UserRegistrationPage extends PageBase {
         setTextInTxtBox(passwordTxtBox,password);
         setTextInTxtBox(confirmPasswordTxtBox,password);
         clickOnButton(registerBtn);
+        WebElement element1 = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.result")));
+
 
     }
     public void userLogOut(){

@@ -21,7 +21,7 @@ public class MyAccountTest extends TestBase{
     String lastName = "Ali";
     String email= "Emad23@test.com";
     @Test(priority = 1)
-    public void userCanRegisterSuccessfully(){
+    public void userCanRegisterSuccessfully() throws InterruptedException {
         homeObject = new HomePage(driver);
         homeObject.openRegistrationPage();
         registerObject = new UserRegistrationPage(driver);

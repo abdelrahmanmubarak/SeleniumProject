@@ -22,7 +22,7 @@ public class EmailFriendTest extends TestBase{
     String personalMessage = "Hello Ahmed, this is for Test";
     //1. User should be registered
     @Test(priority = 1)
-    public void userCanRegisterSuccessfully(){
+    public void userCanRegisterSuccessfully() throws InterruptedException {
         homeObject = new HomePage(driver);
         homeObject.openRegistrationPage();
         registerObject = new UserRegistrationPage(driver);

@@ -18,7 +18,7 @@ public class UserRegistrationTestUsingExcel extends TestBase{
     UserRegistrationPage registerObject;
     LoginPage loginObject;
 
-    @DataProvider (name="ExcelData")
+    @DataProvider (name="UserData")
     public Object[][] userRegisterData() throws IOException {
 
         ExcelReader er = new ExcelReader();
@@ -27,9 +27,9 @@ public class UserRegistrationTestUsingExcel extends TestBase{
 
 
 
-    @Test(priority = 1,dataProvider="ExcelData")
+    @Test(priority = 1,dataProvider="UserData")
     public void userCanRegisterSuccessfully(String firstname,String lastname
-    ,String email,String password) throws IOException, ParseException {
+    ,String email,String password) throws IOException, ParseException, InterruptedException {
 
 
         homeObject = new HomePage(driver);

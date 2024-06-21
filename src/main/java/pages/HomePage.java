@@ -17,7 +17,7 @@ public class HomePage extends PageBase {
     }
     @FindBy(linkText = "Register")
     WebElement registerLink;
-    @FindBy(linkText = "Log in")
+    @FindBy(xpath = "//a[@href='/login?returnUrl=%2F']")
     WebElement loginLink;
     @FindBy(linkText = "Contact us")
     WebElement contactUsLink;
@@ -44,14 +44,11 @@ public class HomePage extends PageBase {
     public void changeCurrency(){
         select = new Select(currencyDropDownList);
         select.selectByVisibleText("Euro");
-
     }
     public void selectNoteBooksMenu(){
         action.moveToElement(computersMenu).perform();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         action.moveToElement(noteBooksMenu).click().build().perform();
-
-
     }
 
 

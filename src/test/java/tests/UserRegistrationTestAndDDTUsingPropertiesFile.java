@@ -1,19 +1,21 @@
 package tests;
 
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.UserRegistrationPage;
+import utilities.LoadPropertiesFromFile;
 
 import java.time.Duration;
 
-public class UserRegistrationTest extends TestBase{
+public class UserRegistrationTestAndDDTUsingPropertiesFile extends TestBase{
 
-    String firstName = "Ahmed";
-    String lastName = "Ali";
-    String email = "Almiolaghbnmkl@test.local";
-    String password = "1234567";
+    String firstname = LoadPropertiesFromFile.userData.getProperty("firstname");
+    String lastname = LoadPropertiesFromFile.userData.getProperty("lastname");
+    String email = LoadPropertiesFromFile.userData.getProperty("email");
+    String password = LoadPropertiesFromFile.userData.getProperty("password");
     //Take Objects from the Pages you want to test
     HomePage homeObject;
     UserRegistrationPage registerObject;
@@ -23,7 +25,7 @@ public class UserRegistrationTest extends TestBase{
         homeObject = new HomePage(driver);
         homeObject.openRegistrationPage();
         registerObject = new UserRegistrationPage(driver);
-        registerObject.registration(firstName,lastName, email,password);
+        registerObject.registration(firstname,lastname, email,password);
         Assert.assertTrue(registerObject.successMessage.getText()
                 .contains("Your registration completed"));
 
@@ -41,11 +43,14 @@ public class UserRegistrationTest extends TestBase{
         loginObject = new LoginPage(driver);
         loginObject.userLogin(email,password);
         Assert.assertTrue(registerObject.logOutLink.isDisplayed());
+
     }
     @Test(dependsOnMethods = {"registeredUserCanLoginIn"})
     public void registeredUserCanLogOutAgain() throws InterruptedException {
         registerObject = new UserRegistrationPage(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         registerObject.userLogOut();
+
     }
+
 }

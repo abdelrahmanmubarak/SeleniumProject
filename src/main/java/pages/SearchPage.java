@@ -34,5 +34,6 @@ public class SearchPage extends PageBase{
         productList.get(0).click();
 
 
+
     }
 }

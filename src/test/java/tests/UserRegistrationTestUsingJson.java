@@ -17,7 +17,7 @@ public class UserRegistrationTestUsingJson extends TestBase{
     UserRegistrationPage registerObject;
     LoginPage loginObject;
     @Test(priority = 1,alwaysRun = true)
-    public void userCanRegisterSuccessfully() throws IOException, ParseException {
+    public void userCanRegisterSuccessfully() throws IOException, ParseException, InterruptedException {
         JsonDataReader jsonDataReader = new JsonDataReader();
         jsonDataReader.JsonReader();
 
