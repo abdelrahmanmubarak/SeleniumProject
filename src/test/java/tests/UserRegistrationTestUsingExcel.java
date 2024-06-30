@@ -1,6 +1,6 @@
 package tests;
 
-import data.ExcelReader;
+import data.ExcelReader2;
 import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -21,12 +21,9 @@ public class UserRegistrationTestUsingExcel extends TestBase{
     @DataProvider (name="UserData")
     public Object[][] userRegisterData() throws IOException {
 
-        ExcelReader er = new ExcelReader();
+        ExcelReader2 er = new ExcelReader2();
         return er.getExcelData();
     }
-
-
-
     @Test(priority = 1,dataProvider="UserData")
     public void userCanRegisterSuccessfully(String firstname,String lastname
     ,String email,String password) throws IOException, ParseException, InterruptedException {

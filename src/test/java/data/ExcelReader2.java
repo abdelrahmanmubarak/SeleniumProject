@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExcelReader {
+public class ExcelReader2 {
 
     // Method to get the FileInputStream for the Excel file
     private FileInputStream getFileInputStream() throws FileNotFoundException {
@@ -38,8 +38,13 @@ public class ExcelReader {
 
         // Get the total number of rows in the sheet (including the header)
         int totalNumberOfRows = sheet.getLastRowNum() + 1; // Add 1 because getLastRowNum() is zero-based
-        // Define the total number of columns (assuming 4 for this example)
-        int totalNumberOfCols = 4;
+
+        // Get the first row (assuming it's the header row) to determine the total number of columns
+        XSSFRow headerRow = sheet.getRow(0);
+        if (headerRow == null) {
+            throw new IOException("Header row is missing in the Excel sheet.");
+        }
+        int totalNumberOfCols = headerRow.getLastCellNum(); // getLastCellNum() returns the count of columns
 
         // Loop through the rows, starting from the second row (index 1) to skip the header
         for (int r = 1; r < totalNumberOfRows; r++) {
@@ -59,8 +64,8 @@ public class ExcelReader {
                 if (cell == null) {
                     rowData[c] = ""; // Handle empty cells
                 } else {
-                    // Get the cell value and store it in the array (adjusting the index to exclude the header)
-                    rowData[c] = cell.toString(); // Adjust index to exclude header
+                    // Get the cell value and store it in the array
+                    rowData[c] = cell.toString();
                     if (!cell.toString().isEmpty()) {
                         rowIsEmpty = false; // Mark row as non-empty if any cell has a value
                     }

@@ -1,6 +1,6 @@
 package tests;
 
-import data.ExcelReader;
+import data.ExcelReader2;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.HomePage;
@@ -16,7 +16,7 @@ public class LoginTestUsingExcelData extends TestBase{
     @DataProvider(name="UserData")
     public Object[][] userRegisterData() throws IOException {
 
-        ExcelReader er = new ExcelReader();
+        ExcelReader2 er = new ExcelReader2();
         return er.getExcelData();
     }
     @Test(dataProvider = "UserData")
