@@ -16,11 +16,11 @@ public class TestBase {
    public static WebDriver driver;
 
 
-   @BeforeSuite
+
+   @BeforeMethod
    @Parameters({"browser"})
     public void setUp( @Optional("chrome") String browserName){
       if (browserName.equalsIgnoreCase("chrome")){
-          WebDriverManager.chromedriver().setup();
           driver = new ChromeDriver();
           driver.manage().window().maximize();
           driver.get("https://demo.nopcommerce.com/");
@@ -28,7 +28,7 @@ public class TestBase {
       }
       else if (browserName.equalsIgnoreCase("firefox")){
          driver = new FirefoxDriver();
-          driver.manage().window().maximize();
+          //driver.manage().window().maximize();
           driver.get("https://demo.nopcommerce.com/");
       }
       else if (browserName.equalsIgnoreCase("safari")){
@@ -49,7 +49,7 @@ public class TestBase {
        }
 
    }
-  @AfterSuite
+  @AfterMethod
     public void closeDriver(){
        driver.quit();
    }
