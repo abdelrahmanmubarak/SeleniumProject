@@ -24,13 +24,14 @@ public class ContactUsTest extends TestBase{
 
 
 
-    public void userCanContactUs(){
+    public void userCanContactUs() throws InterruptedException {
         homeObject = new HomePage(driver);
         homeObject.openContactUsPage();
         contactUsObject = new ContactUsPage(driver);
         contactUsObject.contactUs(fullName,email,enquiry);
         Assert.assertTrue(contactUsObject.successMessage.getText()
-        .contains("Your enquiry has been successfully sent to the store owner."));
+        .contains("Your enquiry has been successfullyyy sent to the store owner."));
+        Thread.sleep(3000);
     }
 
 }

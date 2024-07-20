@@ -1,40 +1,37 @@
 package tests;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import utilities.Helper;
-import utilities.HelperClass2;
 
 import java.io.IOException;
-import java.time.Duration;
 
-public class TestBase {
+public class TestBase2 {
 
    public static WebDriver driver;
 
 
 
-
-   @BeforeClass
+   @BeforeMethod
    @Parameters({"browser"})
     public void setUp( @Optional("chrome") String browserName){
       if (browserName.equalsIgnoreCase("chrome")){
           driver = new ChromeDriver();
           driver.manage().window().maximize();
           driver.get("https://demo.nopcommerce.com/");
-          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
       }
       else if (browserName.equalsIgnoreCase("firefox")){
          driver = new FirefoxDriver();
-          driver.manage().window().maximize();
+          //driver.manage().window().maximize();
           driver.get("https://demo.nopcommerce.com/");
-          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
       }
       else if (browserName.equalsIgnoreCase("safari")){
           driver = new SafariDriver();
@@ -51,11 +48,10 @@ public class TestBase {
            System.out.println("Failed");
            System.out.println("Taking Screenshot....");
            Helper.captureScreenShot(driver, result.getName());
-           System.out.println("Screenshot taken for test case: " + result.getName());
        }
 
    }
-  @AfterClass
+  @AfterMethod
     public void closeDriver(){
        driver.quit();
    }

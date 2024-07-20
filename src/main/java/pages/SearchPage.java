@@ -31,7 +31,12 @@ public class SearchPage extends PageBase{
     public void searchUsingAutoSuggest(String searchTxt){
         setTextInTxtBox(searchTxtBox,searchTxt);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        productList.get(0).click();
+        // using get with index
+       // productList.get(0).click();
+        // using enhanced for..loop
+        for (WebElement productName:productList){
+            productName.click();
+        }
 
 
 

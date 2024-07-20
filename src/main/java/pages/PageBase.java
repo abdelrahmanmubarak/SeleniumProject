@@ -7,20 +7,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class PageBase {
-
+    public WebDriverWait wait;
     // Protected member variables for WebDriver, JavascriptExecutor, Select, and Actions
     protected WebDriver driver;
     public JavascriptExecutor jse;
     public Select select;
     public Actions action;
 
+
     // Constructor that initializes the WebDriver and the PageFactory
     public PageBase(WebDriver driver) {
         this.driver = driver;
         // Initialize the PageFactory, which will initialize the WebElements declared in the child classes
         PageFactory.initElements(driver, this);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     // Protected static method to set text in a text box WebElement

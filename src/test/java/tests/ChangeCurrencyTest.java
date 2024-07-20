@@ -22,14 +22,15 @@ public class ChangeCurrencyTest extends TestBase{
         homeObject = new HomePage(driver);
         homeObject.changeCurrency();
     }
-    @Test(priority = 2)
-    public void userCanSearchUsingAutoSuggest(){
+    @Test(priority = 2 )
+    public void userCanSearchUsingAutoSuggest() throws InterruptedException {
         searchPageObject = new SearchPage(driver);
         productDetailsPageObject = new ProductDetailsPage(driver);
         searchPageObject.searchUsingAutoSuggest(productName);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         Assert.assertTrue(productDetailsPageObject.productNameBreadCrumb.getText()
                 .contains(productNameBreadCrumb));
+        Thread.sleep(1000);
         Assert.assertTrue(productDetailsPageObject.productPriceLbl
                 .getText().contains("€"));
         System.out.println(productDetailsPageObject.productPriceLbl
