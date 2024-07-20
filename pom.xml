@@ -37,7 +37,7 @@
                 <plugin>
                     <groupId>io.qameta.allure</groupId>
                     <artifactId>allure-maven-plugin</artifactId>
-                    <version>2.14.0</version> <!-- Use the latest version -->
+                    <version>2.30.0</version> <!-- Use the latest version -->
                     <configuration>
                         <reportVersion>2.19.0</reportVersion>
                         <resultsDirectory>target/allure-results</resultsDirectory>
