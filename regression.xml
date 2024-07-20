@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="4" name="nopcommerce Regression Suite" parallel="tests">
 
-    <test  verbose="2" preserve-order="false" name="Regression Test chrome">
+    <test  verbose="2" preserve-order="false" name="Regression Test chrome1">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="tests.JavaFaker2"/>
