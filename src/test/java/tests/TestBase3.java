@@ -19,10 +19,10 @@ public class TestBase3 {
     @Parameters({"browser"})
     public void setUp(@Optional("chrome") String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
+
             driver.set(new ChromeDriver());
         } else if (browserName.equalsIgnoreCase("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
+
             driver.set(new FirefoxDriver());
         } else if (browserName.equalsIgnoreCase("safari")) {
             driver.set(new SafariDriver());
