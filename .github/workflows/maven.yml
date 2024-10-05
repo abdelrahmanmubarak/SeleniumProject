@@ -1,0 +1,44 @@
+name: Selenium Tests
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'temurin'  # You can also use 'adopt' if preferred
+    
+    - name: Install Chromium and ChromeDriver
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y chromium-browser
+        sudo apt-get install -y chromium-chromedriver
+
+    - name: Install Firefox and Geckodriver
+      run: |
+        sudo apt-get install -y firefox
+        # Install Geckodriver
+        GECKODRIVER_VERSION=$(curl -s https://api.github.com/repos/mozilla/geckodriver/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')
+        wget https://github.com/mozilla/geckodriver/releases/download/${GECKODRIVER_VERSION}/geckodriver-${GECKODRIVER_VERSION}-linux64.tar.gz
+        tar -xzf geckodriver-${GECKODRIVER_VERSION}-linux64.tar.gz
+        sudo mv geckodriver /usr/local/bin/
+        sudo chmod +x /usr/local/bin/geckodriver
+        rm geckodriver-${GECKODRIVER_VERSION}-linux64.tar.gz
+
+    - name: Run tests
+      env:
+        DISPLAY: :99
+      run: |
+        export CHROME_BIN=/usr/bin/chromium-browser
+        export CHROME_DRIVER=/usr/bin/chromedriver
+        export FIREFOX_BIN=/usr/bin/firefox
+        export GECKO_DRIVER=/usr/local/bin/geckodriver
+        mvn test
