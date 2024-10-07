@@ -12,12 +12,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class PageBase {
-    public WebDriverWait wait;
     // Protected member variables for WebDriver, JavascriptExecutor, Select, and Actions
     protected WebDriver driver;
     public JavascriptExecutor jse;
     public Select select;
     public Actions action;
+    public WebDriverWait wait;
 
 
     // Constructor that initializes the WebDriver and the PageFactory
@@ -43,4 +43,5 @@ public class PageBase {
         // Use the JavascriptExecutor to execute a JavaScript command that scrolls the page down by 2500 pixels
         jse.executeScript("scrollBy(0,2500)");
     }
+
 }

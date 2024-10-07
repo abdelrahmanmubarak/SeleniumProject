@@ -1,8 +1,11 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
@@ -30,13 +33,15 @@ public class SearchPage extends PageBase{
 
     public void searchUsingAutoSuggest(String searchTxt){
         setTextInTxtBox(searchTxtBox,searchTxt);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+       // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("ui-id-1")));
         // using get with index
-       // productList.get(0).click();
+        productList.get(0).click();
         // using enhanced for..loop
-        for (WebElement productName:productList){
+        /*for (WebElement productName:productList){
             productName.click();
-        }
+        }*/
 
 
 

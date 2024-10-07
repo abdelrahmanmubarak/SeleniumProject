@@ -1,64 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="10" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-03T08:56:34Z" name="nopcommerce Regression Suite" finished-at="2024-06-03T08:56:42Z" duration-ms="7641">
+  <suite started-at="2024-10-07T17:13:36 EEST" name="nopcommerce Regression Suite" finished-at="2024-10-07T17:13:52 EEST" duration-ms="15727">
     <groups>
     </groups>
-    <test started-at="2024-06-03T08:56:34Z" name="Regression Test" finished-at="2024-06-03T08:56:42Z" duration-ms="7641">
-      <class name="tests.UserRegistrationTestUsingJavaFaker">
-        <test-method signature="userCanRegisterSuccessfully()[pri:1, instance:tests.UserRegistrationTestUsingJavaFaker@2db4ad1]" started-at="2024-06-03T08:56:38Z" name="userCanRegisterSuccessfully" finished-at="2024-06-03T08:56:42Z" duration-ms="4135" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userCanRegisterSuccessfully -->
-        <test-method is-config="true" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationTestUsingJavaFaker@2db4ad1]" started-at="2024-06-03T08:56:42Z" name="screenShotOnFailure" finished-at="2024-06-03T08:56:42Z" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=userCanRegisterSuccessfully status=SUCCESS method=UserRegistrationTestUsingJavaFaker.userCanRegisterSuccessfully()[pri:1, instance:tests.UserRegistrationTestUsingJavaFaker@2db4ad1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- screenShotOnFailure -->
-      </class> <!-- tests.UserRegistrationTestUsingJavaFaker -->
-      <class name="tests.ProductHoverMenuTest">
-        <test-method signature="userCanSelectSubCatUsingHoverMenu()[pri:0, instance:tests.ProductHoverMenuTest@765d55d5]" started-at="2024-06-03T08:56:36Z" name="userCanSelectSubCatUsingHoverMenu" finished-at="2024-06-03T08:56:37Z" duration-ms="767" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userCanSelectSubCatUsingHoverMenu -->
-        <test-method is-config="true" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.ProductHoverMenuTest@765d55d5]" started-at="2024-06-03T08:56:37Z" name="screenShotOnFailure" finished-at="2024-06-03T08:56:37Z" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=userCanSelectSubCatUsingHoverMenu status=SUCCESS method=ProductHoverMenuTest.userCanSelectSubCatUsingHoverMenu()[pri:0, instance:tests.ProductHoverMenuTest@765d55d5] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- screenShotOnFailure -->
-      </class> <!-- tests.ProductHoverMenuTest -->
-      <class name="tests.SearchProductTest">
-        <test-method signature="userCanSearchForProduct()[pri:0, instance:tests.SearchProductTest@2513a118]" started-at="2024-06-03T08:56:37Z" name="userCanSearchForProduct" finished-at="2024-06-03T08:56:38Z" duration-ms="1188" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userCanSearchForProduct -->
-        <test-method is-config="true" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.SearchProductTest@2513a118]" started-at="2024-06-03T08:56:38Z" name="screenShotOnFailure" finished-at="2024-06-03T08:56:38Z" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=userCanSearchForProduct status=SUCCESS method=SearchProductTest.userCanSearchForProduct()[pri:0, instance:tests.SearchProductTest@2513a118] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- screenShotOnFailure -->
-      </class> <!-- tests.SearchProductTest -->
-      <class name="tests.ContactUsTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.ContactUsTest@7c3e4b1a]" started-at="2024-06-03T08:56:31Z" name="setUp" finished-at="2024-06-03T08:56:34Z" duration-ms="3403" status="PASS">
+    <test started-at="2024-10-07T17:13:36 EEST" name="Regression Test chrome" finished-at="2024-10-07T17:13:52 EEST" duration-ms="15727">
+      <class name="tests.ChangeCurrencyTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.ChangeCurrencyTest@54eb2b70]" started-at="2024-10-07T17:13:37 EEST" name="setUp" finished-at="2024-10-07T17:13:44 EEST" duration-ms="7348" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,26 +18,152 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="userCanContactUs()[pri:0, instance:tests.ContactUsTest@7c3e4b1a]" started-at="2024-06-03T08:56:34Z" name="userCanContactUs" finished-at="2024-06-03T08:56:36Z" duration-ms="1434" status="PASS">
+        <test-method signature="userCanChangeCurrency()[pri:1, instance:tests.ChangeCurrencyTest@54eb2b70]" started-at="2024-10-07T17:13:44 EEST" name="userCanChangeCurrency" finished-at="2024-10-07T17:13:52 EEST" duration-ms="8108" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to find element with locator By.id: customerCurrency
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.7.5', java.version: '11.0.22'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.id: customerCurrency
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.7.5', java.version: '11.0.22'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy13.getTagName(Unknown Source)
+at org.openqa.selenium.support.ui.Select.<init>(Select.java:43)
+at pages.HomePage.changeCurrency(HomePage.java:48)
+at tests.ChangeCurrencyTest.userCanChangeCurrency(ChangeCurrencyTest.java:23)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userCanContactUs -->
-        <test-method is-config="true" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.ContactUsTest@7c3e4b1a]" started-at="2024-06-03T08:56:36Z" name="screenShotOnFailure" finished-at="2024-06-03T08:56:36Z" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=userCanContactUs status=SUCCESS method=ContactUsTest.userCanContactUs()[pri:0, instance:tests.ContactUsTest@7c3e4b1a] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- userCanChangeCurrency -->
+        <test-method signature="userCanSearchUsingAutoSuggest()[pri:2, instance:tests.ChangeCurrencyTest@54eb2b70]" started-at="2024-10-07T17:13:52 EEST" name="userCanSearchUsingAutoSuggest" finished-at="2024-10-07T17:13:52 EEST" duration-ms="27" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.7.5', java.version: '11.0.22'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a81a8a94cb925088e1ed509e57b3521c, findElement {using=id, value=small-searchterms}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: /var/folders/sp/r_98my697mb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58780}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58780/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a81a8a94cb925088e1ed509e57b3521c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.7.5', java.version: '11.0.22'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a81a8a94cb925088e1ed509e57b3521c, findElement {using=id, value=small-searchterms}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: /var/folders/sp/r_98my697mb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58780}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58780/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a81a8a94cb925088e1ed509e57b3521c
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy13.sendKeys(Unknown Source)
+at pages.PageBase.setTextInTxtBox(PageBase.java:33)
+at pages.SearchPage.searchUsingAutoSuggest(SearchPage.java:35)
+at tests.ChangeCurrencyTest.userCanSearchUsingAutoSuggest(ChangeCurrencyTest.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- screenShotOnFailure -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:tests.ContactUsTest@7c3e4b1a]" started-at="2024-06-03T08:56:42Z" name="closeDriver" finished-at="2024-06-03T08:56:42Z" duration-ms="171" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeDriver -->
-      </class> <!-- tests.ContactUsTest -->
-    </test> <!-- Regression Test -->
+        </test-method> <!-- userCanSearchUsingAutoSuggest -->
+      </class> <!-- tests.ChangeCurrencyTest -->
+    </test> <!-- Regression Test chrome -->
   </suite> <!-- nopcommerce Regression Suite -->
 </testng-results>

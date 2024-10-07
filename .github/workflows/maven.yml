@@ -9,6 +9,7 @@
 name: Java CI with Maven
 
 on:
+   workflow_dispatch:
   push:
     branches: [ "master" ]
   pull_request:
@@ -28,4 +29,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn clean test
+      run: mvn clean test -DXmlFile = regression.xml

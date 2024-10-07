@@ -3,7 +3,9 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -15,22 +17,31 @@ import java.time.Duration;
 
 public class TestBase {
 
-   public static WebDriver driver;
+   public WebDriver driver;
 
 
 
 
    @BeforeClass
    @Parameters({"browser"})
-    public void setUp( @Optional("chrome") String browserName){
-      if (browserName.equalsIgnoreCase("chrome")){
-          driver = new ChromeDriver();
-          driver.manage().window().maximize();
-          driver.get("https://demo.nopcommerce.com/");
-          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-      }
+    public void setUp( @Optional("chrome") String browserName) {
+       if (browserName.equalsIgnoreCase("chrome")) {
+           ChromeOptions options = new ChromeOptions();
+           options.setBinary("/usr/bin/chromium-browser"); // Specify the correct Chrome binary
+           if (System.getenv() != null) {
+               options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
+           }
+           driver = new ChromeDriver();
+           driver.manage().window().maximize();
+           driver.get("https://demo.nopcommerce.com/");
+           driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+       }
+/*
       else if (browserName.equalsIgnoreCase("firefox")){
+          FirefoxOptions options = new FirefoxOptions();
+          if (System.getenv()!=null){
+              options.addArguments("--headless","--no-sandbox","--disable-dev-shm-usage");
+          }
          driver = new FirefoxDriver();
           driver.manage().window().maximize();
           driver.get("https://demo.nopcommerce.com/");
@@ -43,9 +54,9 @@ public class TestBase {
       }
 
 
-   }
+   }*/
 
-   @AfterMethod
+  /*@AfterMethod
     public void screenShotOnFailure(ITestResult result) throws IOException {
        if (result.getStatus()==ITestResult.FAILURE){
            System.out.println("Failed");
@@ -58,5 +69,6 @@ public class TestBase {
   @AfterClass
     public void closeDriver(){
        driver.quit();
+   }*/
    }
 }

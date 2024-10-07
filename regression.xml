@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="4" name="nopcommerce Regression Suite" parallel="tests">
+<suite thread-count="4" name="nopcommerce Regression Suite" >
 
-    <test  verbose="2" preserve-order="false" name="Regression Test chrome1">
+    <test  verbose="2" preserve-order="false" name="Regression Test chrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="tests.JavaFaker2"/>
+            <class name="tests.ChangeCurrencyTest"/>
         </classes>
     </test>
 
-    <test  verbose="2" preserve-order="false" name="Regression Test firefox">
+    <!--<test  verbose="2" preserve-order="false" name="Regression Test firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="tests.JavaFaker2"/>
+            <class name="tests.ChangeCurrencyTest"/>
         </classes>
-    </test>
+    </test>-->
 </suite>

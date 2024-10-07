@@ -3,6 +3,7 @@ pages/ContactUsPage.class
 pages/MyAccountPage.class
 pages/WishListPage.class
 pages/HomePage.class
+pages/TestSuper.class
 pages/EmailFriendPage.class
 pages/PageBase.class
 pages/LoginPage.class
