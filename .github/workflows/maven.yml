@@ -31,5 +31,5 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      working-directory: Title
+      working-directory: .Title
       run: mvn clean test
