@@ -24,14 +24,11 @@ public class TestBase {
 
    @BeforeClass
    @Parameters({"browser"})
-    public void setUp( @Optional("chrome") String browserName) {
+   public void setUp(@Optional("chrome") String browserName) {
        if (browserName.equalsIgnoreCase("chrome")) {
            ChromeOptions options = new ChromeOptions();
-           options.setBinary("/usr/bin/chromium-browser"); // Specify the correct Chrome binary
-           if (System.getenv() != null) {
-               options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
-           }
-           driver = new ChromeDriver();
+           options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu");
+           driver = new ChromeDriver(options);
            driver.manage().window().maximize();
            driver.get("https://testautomationu.applitools.com/learningpaths.html");
            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
