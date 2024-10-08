@@ -33,7 +33,7 @@ public class TestBase {
            }
            driver = new ChromeDriver();
            driver.manage().window().maximize();
-           driver.get("https://demo.nopcommerce.com/");
+           driver.get("https://www.amazon.com/");
            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
        }
 /*

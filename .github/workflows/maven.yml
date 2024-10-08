@@ -19,6 +19,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      Runner_OS: true
 
     steps:
     - uses: actions/checkout@v3
@@ -29,4 +31,5 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
+      working-directory: Title
       run: mvn clean test
