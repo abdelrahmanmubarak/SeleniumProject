@@ -33,7 +33,7 @@ public class TestBase {
            }
            driver = new ChromeDriver();
            driver.manage().window().maximize();
-           driver.get("https://www.amazon.com/");
+           driver.get("https://testautomationu.applitools.com/learningpaths.html");
            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
        }
 /*
